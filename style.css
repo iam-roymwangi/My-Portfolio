@@ -705,3 +705,15 @@ body{
     }
 
 }
+
+@media screen and (max-width: 576px) {
+    
+      .project-card{
+        width: 100%;
+        height: 350px;
+    }
+    .project-card__image{
+        height: 146px;
+    }
+    
+}
