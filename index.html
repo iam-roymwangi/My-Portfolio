@@ -44,10 +44,11 @@
             <br>
             <h3>Web Developer Based in Nairobi, Kenya</h3>
             <p>Crafting intuitive and high-performance web-based systems for digital solutions.</p>
-            <div class="hero__actions">
-                <button class="btn">Work With Me</button>
-                <button class="btn btn--secondary">Download CV</button>
-            </div>
+        </div>
+
+        <div class="hero__actions">
+            <button class="btn">Work With Me</button>
+            <button id="download-cv" class="btn btn--secondary">Download CV</button>
         </div>
 
         <div class="hero__socials">
@@ -128,7 +129,7 @@
                         </div>
                         <p class="project-card__desc">Collaborated in a telemedicine platform that digitizes the services
                             offered by doctors, hospitals, labs and pharmacies.</p>
-                        <a class="btn" href="https://cacumatormentorship.org/">View Live Demo</a>
+                        <a class="btn" href="https://askremohealth.com">View Live Demo</a>
                     </div>
                     <div class="project-card">
                         <img src="assets/semarrands.png" alt="Music Platform" class="project-card__image">
@@ -137,7 +138,7 @@
                             <p>August 2023</p>
                         </div>
                         <p class="project-card__desc">Vehicle imports and sales website.</p>
-                        <a class="btn" href="https://cacumatormentorship.org/">View Live Demo</a>
+                        <a class="btn" href="https://semarrands.co.ke/">View Live Demo</a>
                     </div>
                     <div class="project-card">
                         <img src="assets/cacumator.png" alt="Crypto Market" class="project-card__image">
@@ -154,9 +155,7 @@
                             <h5>Tabibu Technologies</h5>
                             <p>May 2025</p>
                         </div>
-                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Sit autem soluta consequatur, sequi
-                            et sint laudantium non rem veritatis.</p>
+                        <p class="project-card__desc">Tabibu Technologies Website.</p>
                         <a class="btn" href="https://tabibuhealth.com/">View Live Demo</a>
                     </div>
                     <div class="project-card">
@@ -165,9 +164,7 @@
                             <h5>Tours Website</h5>
                             <p>May 2025</p>
                         </div>
-                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Sit autem soluta consequatur, sequi
-                            et sint laudantium non rem veritatis.</p>
+                        <p class="project-card__desc">A tour company website template.</p>
                         <a class="btn" href="#">View Live Demo</a>
                     </div>
                 </div>
@@ -258,6 +255,23 @@
             <a href="#">About</a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('download-cv').addEventListener('click', function() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            // Set the href to the CV file path
+            link.href = 'assets/cv/ROY-MWANGI-Resume-20250717.pdf';
+            // Set the download attribute to force download
+            link.download = 'ROY-MWANGI-Resume-20250717.pdf';
+            // Append to the body
+            document.body.appendChild(link);
+            // Trigger the download
+            link.click();
+            // Remove the link from the document
+            document.body.removeChild(link);
+        });
+    </script>
 
 </body>
 
