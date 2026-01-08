@@ -24,7 +24,7 @@
         <div class="navbar__actions">
             <div class="navbar__location">
                 <h5>Nairobi, Kenya</h5>
-                <p>6:18:31 pm</p>
+                <p id="current-time">6:18:31 pm</p>
             </div>
             <button class="btn">Get a Quote</button>
         </div>
@@ -189,6 +189,15 @@
                             consult healthcare providers via video calls.</p>
                         <a class="btn" href="https://github.com/iam-roymwangi/AfyaConnect">View Github Demo</a>
                     </div>
+                    <div class="project-card">
+                        <img src="assets/Fleetguru.png" alt="Jobs Platform" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Fleetguru Hackathon Project (Runner's up)</h5>
+                            <p>November 2025</p>
+                        </div>
+                        <p class="project-card__desc">Digital Explorers UI/UX Hackathon Project</p>
+                        <a class="btn" href="https://fleetguru.vercel.app/">View Live Demo</a>
+                    </div>
                 </div>
 
             </section>
@@ -279,6 +288,25 @@
     </footer>
 
     <script>
+        // Dynamic time update
+        function updateTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'Africa/Nairobi',
+                hour: 'numeric',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const timeString = now.toLocaleTimeString('en-US', options).toLowerCase();
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        // Update time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // CV download functionality
         document.getElementById('download-cv').addEventListener('click', function () {
             // Create a temporary link element
             const link = document.createElement('a');
